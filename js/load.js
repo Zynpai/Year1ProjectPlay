@@ -11,7 +11,7 @@ var loadState = {
 		game.load.image('laser', 'img/star.png');
 		game.load.image('menu', 'img/Menu.jpg');
 		game.load.image('Bstairs', 'img/BStairs.png');
-	
+		game.load.image('stairs','img/stairs.png');
 		game.load.image('slaser', 'img/slaser.png');
 		game.load.image('Qskill', 'img/Qskill.png');
 		game.load.image('QLskill', 'img/QLskill.png');
