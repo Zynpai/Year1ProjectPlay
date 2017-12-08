@@ -319,7 +319,7 @@ function bossFire() {
 	blaser.reset(boss.x + 405, boss.y +300);
 
 	if (bossLives <= 10){
-	game.physics.arcade.moveToObject(blaser,player,450);
+	game.physics.arcade.moveToObject(blaser,player,400);
 	firingTimerB = game.time.now + 2000;
 	}
 	else{
@@ -399,7 +399,7 @@ function enemyFires(sbaddies) {
         // And fire the bullet from this enemy
         enemyBullet.reset(shooter.body.x , shooter.body.y + 52);
 
-        game.physics.arcade.moveToObject(enemyBullet,player,550);
+        game.physics.arcade.moveToObject(enemyBullet,player,500);
         firingTimerE = game.time.now + 2000;
     }
 
