@@ -76,6 +76,8 @@ create: function(){
 	player.TURN_RATE = 5;
 	game.physics.enable(player, Phaser.Physics.ARCADE);
 	player.body.allowRotation = false;
+	game.world.setBounds(0,0,770,570);
+	player.body.collideWorldBounds=true;
 	
 	cursors = game.input.keyboard.createCursorKeys();
 
@@ -222,7 +224,7 @@ update: function(){
 	if (key5.isDown && skill1Ready == 1)
 	{
 		//do this
-		player.rotation = game.physics.arcade.moveToPointer(player, 4000);
+		player.rotation = game.physics.arcade.moveToPointer(player, 10000);
 		ELpic = game.add.sprite(755, 555, 'ELskill');
 		skill1Ready = 0;
 		totalTimer = 0;
