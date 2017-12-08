@@ -399,7 +399,7 @@ function enemyFires(sbaddies) {
         // And fire the bullet from this enemy
         enemyBullet.reset(shooter.body.x , shooter.body.y + 52);
 
-        game.physics.arcade.moveToObject(enemyBullet,player,350);
+        game.physics.arcade.moveToObject(enemyBullet,player,550);
         firingTimerE = game.time.now + 2000;
     }
 
