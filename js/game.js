@@ -299,16 +299,16 @@ function Attack(baddie) {
 	
 	if (!(baddie.body.x + 500 < player.body.x || baddie.body.x - 500 > player.body.x) && !(baddie.body.y + 500 < player.body.y || baddie.body.y - 500> player.body.y )){
 		if (player.body.x > baddie.body.x){
-			baddie.body.velocity.x = 100;
+			baddie.body.velocity.x = 150;
 		}
 		if (player.body.x < baddie.body.x){
-			baddie.body.velocity.x = -100;
+			baddie.body.velocity.x = -150;
 		}
 		if (player.body.y > baddie.body.y){
-			baddie.body.velocity.y = 100;
+			baddie.body.velocity.y = 150;
 		}
 		if (player.body.y < baddie.body.y){
-			baddie.body.velocity.y = -100;
+			baddie.body.velocity.y = -150;
 		}
 	}	
 	
