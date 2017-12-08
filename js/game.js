@@ -320,11 +320,11 @@ function bossFire() {
 
 	if (bossLives <= 10){
 	game.physics.arcade.moveToObject(blaser,player,400);
-	firingTimerB = game.time.now + 3000;
+	firingTimerB = game.time.now + 2000;
 	}
 	else{
     game.physics.arcade.moveToObject(blaser,player,600);
-	firingTimerB = game.time.now + 5000;
+	firingTimerB = game.time.now + 3000;
 	}
 }	
 
