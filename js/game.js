@@ -319,11 +319,11 @@ function bossFire() {
 	blaser.reset(boss.x + 405, boss.y +300);
 
 	if (bossLives <= 10){
-	game.physics.arcade.moveToObject(blaser,player,400);
+	game.physics.arcade.moveToObject(blaser,player,300);
 	firingTimerB = game.time.now + 2000;
 	}
 	else{
-    game.physics.arcade.moveToObject(blaser,player,600);
+    game.physics.arcade.moveToObject(blaser,player,400);
 	firingTimerB = game.time.now + 3000;
 	}
 }	
