@@ -20,6 +20,7 @@ create: function() {
 	key4 = game.input.keyboard.addKey(Phaser.Keyboard.D);
 	key5 = game.input.keyboard.addKey(Phaser.Keyboard.E);
 	key6 = game.input.keyboard.addKey(Phaser.Keyboard.Q);
+	key7 = game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
 	
 	game.physics.startSystem(Phaser.Physics.ARCADE);
 	game.add.sprite(0, 0, 'sky');
@@ -194,6 +195,21 @@ update: function() {
 	
 	
 	if (key5.isDown && skill1Ready == 1)
+	{
+		//do this
+		player.rotation = game.physics.arcade.moveToPointer(player, 10000);
+		ELpic = game.add.sprite(755, 555, 'ELskill');
+		skill1Ready = 0;
+		totalTimer = 0;
+		Epic.destroy();
+		alreadyDone += 1;
+	}
+	else {
+		timer.loop(1500, updateCounter, this);
+		timer.start();		
+	}
+	
+	if (key7.isDown && skill1Ready == 1)
 	{
 		//do this
 		player.rotation = game.physics.arcade.moveToPointer(player, 10000);
