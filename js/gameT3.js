@@ -14,7 +14,7 @@ create: function(){
 	key3 = game.input.keyboard.addKey(Phaser.Keyboard.S);
 	key4 = game.input.keyboard.addKey(Phaser.Keyboard.D);
 	key5 = game.input.keyboard.addKey(Phaser.Keyboard.E);
-	key6 = game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
+	key7 = game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
 	
 	game.add.sprite(0, 0, 'sky');
 		
@@ -169,7 +169,7 @@ update: function(){
 		timer.start();		
 	}
 	
-	if (key6.isDown && skill1Ready == 1)
+	if (key7.isDown && skill1Ready == 1)
 	{
 		//do this
 		player.rotation = game.physics.arcade.moveToPointer(player, 10000);
