@@ -14,6 +14,7 @@ create: function(){
 	key3 = game.input.keyboard.addKey(Phaser.Keyboard.S);
 	key4 = game.input.keyboard.addKey(Phaser.Keyboard.D);
 	key5 = game.input.keyboard.addKey(Phaser.Keyboard.E);
+	key6 = game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
 	
 	game.add.sprite(0, 0, 'sky');
 		
@@ -57,7 +58,7 @@ create: function(){
 },
 
 update: function(){
-	game.debug.text("Press E to teleport (2 second cooldown)" , 250, 550);
+	game.debug.text("Press E/Spacebar to teleport (2 second cooldown)" , 250, 550);
 	game.debug.text("Touch the stairs to proceed", 270, 570);
 	
 	rotatePlayer();
@@ -154,6 +155,21 @@ update: function(){
 	}
 	
 	if (key5.isDown && skill1Ready == 1)
+	{
+		//do this
+		player.rotation = game.physics.arcade.moveToPointer(player, 10000);
+		ELpic = game.add.sprite(755, 555, 'ELskill');
+		skill1Ready = 0;
+		totalTimer = 0;
+		Epic.destroy();
+		alreadyDone += 1;
+	}
+	else {
+		timer.loop(1500, updateCounter, this);
+		timer.start();		
+	}
+	
+	if (key6.isDown && skill1Ready == 1)
 	{
 		//do this
 		player.rotation = game.physics.arcade.moveToPointer(player, 10000);
