@@ -22,6 +22,7 @@ create: function() {
 	key4 = game.input.keyboard.addKey(Phaser.Keyboard.D);
 	key5 = game.input.keyboard.addKey(Phaser.Keyboard.E);
 	key6 = game.input.keyboard.addKey(Phaser.Keyboard.Q);
+	key7 = game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
 	
 	game.physics.startSystem(Phaser.Physics.ARCADE);
 	game.add.sprite(0, 0, 'sky');
@@ -93,7 +94,7 @@ create: function() {
 
 update:function() {
 	
-	game.debug.text("Press Q to fire beam (15 sec cooldown)" , 250, 550);
+	game.debug.text("Press Q/RightClick to fire beam (15 sec cooldown)" , 250, 550);
 	game.debug.text("Kill all baddies to unlock stairs", 270, 570);
 	
 	rotatePlayer();
@@ -217,7 +218,39 @@ update:function() {
 		timer.start();		
 	}
 	
+	if (key7.isDown && skill1Ready == 1)
+	{
+		//do this
+		player.rotation = game.physics.arcade.moveToPointer(player, 10000);
+		ELpic = game.add.sprite(755, 555, 'ELskill');
+		skill1Ready = 0;
+		totalTimer = 0;
+		Epic.destroy();
+		alreadyDone += 1;
+	}
+	else {
+		timer.loop(1500, updateCounter, this);
+		timer.start();		
+	}
+	
 	if (key6.isDown && skill2Ready == 1)
+	{
+		//do this
+		fireSLaser();
+		rotateSLaser();
+		QLpic = game.add.sprite(705, 555, 'QLskill');
+		skill2Ready = 0;
+		totalTimer2 = 0;
+		Qpic.destroy();
+		alreadyDone2 += 1;
+	}
+	else {
+		timer2.loop(15000, updateCounter2, this);
+		timer2.start();
+		
+	}
+	
+	if (game.input.activePointer.rightButton.isDown && skill2Ready == 1)
 	{
 		//do this
 		fireSLaser();
