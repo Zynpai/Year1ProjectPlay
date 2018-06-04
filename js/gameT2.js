@@ -138,11 +138,16 @@ update: function(){
 	
 	
 	
+		
+	for (var index in phaserKeys) {
+		// Save a reference to the current key
+		var key = phaserKeys[index];
 		// If the key was just pressed, fire a laser
-		if (game.input.activePointer.isDown) {
+		if (key.justDown || game.input.activePointer.isDown) {
 			fireLaser();
 			rotateLaser();			
 		}
+	}
 	
 	
 },	
