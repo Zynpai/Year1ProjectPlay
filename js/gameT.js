@@ -66,15 +66,6 @@ var firingTimerB;
 
 
 var gameStateT = {
-	
-init: function() {
-	// Listen to space & enter keys
-	var keys = [Phaser.KeyCode.SPACEBAR];
-	// Create Phaser.Key objects for listening to the state
-	phaserKeys = game.input.keyboard.addKeys(keys);
-	// Capture these keys to stop the browser from receiving this event
-	game.input.keyboard.addKeyCapture(keys);
-}, 
 
 	
 create: function() {
