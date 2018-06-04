@@ -94,7 +94,7 @@ create: function() {
 
 update:function() {
 	
-	game.debug.text("Press Q/RightClick to fire beam (15 sec cooldown)" , 250, 550);
+	game.debug.text("Press Q to fire beam (15 sec cooldown)" , 250, 550);
 	game.debug.text("Kill all baddies to unlock stairs", 270, 570);
 	
 	rotatePlayer();
@@ -234,23 +234,6 @@ update:function() {
 	}
 	
 	if (key6.isDown && skill2Ready == 1)
-	{
-		//do this
-		fireSLaser();
-		rotateSLaser();
-		QLpic = game.add.sprite(705, 555, 'QLskill');
-		skill2Ready = 0;
-		totalTimer2 = 0;
-		Qpic.destroy();
-		alreadyDone2 += 1;
-	}
-	else {
-		timer2.loop(15000, updateCounter2, this);
-		timer2.start();
-		
-	}
-	
-	if (game.input.activePointer.rightButton.isDown && skill2Ready == 1)
 	{
 		//do this
 		fireSLaser();
