@@ -44,7 +44,7 @@ create: function(){
 	blasers = game.add.group();
     blasers.enableBody = true;
     blasers.physicsBodyType = Phaser.Physics.ARCADE;
-    blasers.createMultiple(3, 'blaser')
+    blasers.createMultiple(10, 'blaser')
     blasers.setAll('anchor.x', 0.5);
     blasers.setAll('anchor.y', 1);
     blasers.setAll('outOfBoundsKill', true);
