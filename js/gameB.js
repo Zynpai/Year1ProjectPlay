@@ -274,7 +274,7 @@ update: function(){
 	}
 	game.physics.arcade.overlap(player, blasers, collisionHandler5, null, this);
 	game.physics.arcade.overlap(player, bflames, collisionHandler6, null, this);
-	game.physics.arcade.overlap(blocks, blasers, collisionHandler7, null, this);
+	
 	
 	game.physics.arcade.collide(player, toolbars);
 	game.physics.arcade.collide(player, Bstairs);
