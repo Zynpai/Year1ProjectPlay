@@ -44,7 +44,7 @@ create: function(){
 	blasers = game.add.group();
     blasers.enableBody = true;
     blasers.physicsBodyType = Phaser.Physics.ARCADE;
-    blasers.createMultiple(5, 'blaser')
+    blasers.createMultiple(1, 'blaser')
     blasers.setAll('anchor.x', 0.5);
     blasers.setAll('anchor.y', 1);
     blasers.setAll('outOfBoundsKill', true);
@@ -85,7 +85,7 @@ create: function(){
 	lasers = game.add.group();
 	lasers.enableBody = true;
 	lasers.physicsBodyType = Phaser.Physics.ARCADE;
-	lasers.createMultiple(10, 'laser');
+	lasers.createMultiple(5, 'laser');
 	lasers.callAll('events.onOutOfBounds.add', 'events.onOutOfBounds', resetLaser);
 	lasers.callAll('anchor.setTo', 'anchor', 0.5, 1.0);
 	lasers.setAll('checkWorldBounds', true);
@@ -93,7 +93,7 @@ create: function(){
 	slasers = game.add.group();
 	slasers.enableBody = true;
 	slasers.physicsBodyType = Phaser.Physics.ARCADE;
-	slasers.createMultiple(5, 'slaser');
+	slasers.createMultiple(1, 'slaser');
 	slasers.callAll('events.onOutOfBounds.add', 'events.onOutOfBounds', resetSLaser);
 	slasers.callAll('anchor.setTo', 'anchor', 0.5, 1.0);
 	slasers.setAll('checkWorldBounds', true);
