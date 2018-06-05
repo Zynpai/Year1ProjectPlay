@@ -452,7 +452,7 @@ function collisionHandler6(){
 }
 
 function collisionHandler7(){
-	blasers.kill();
+	blaser.kill();
 	
 }
 
