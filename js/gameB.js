@@ -148,7 +148,7 @@ update: function(){
     if (key2.isDown)
     {
         //  Move to the left
-        player.body.velocity.x = -150;
+        player.body.velocity.x = -400;
 
         player.animations.play('walk');
 	}
@@ -163,7 +163,7 @@ update: function(){
     if (key4.isDown)
     {
         //  Move to the right
-        player.body.velocity.x = 150;
+        player.body.velocity.x = 400;
 
         player.animations.play('walk');
 		
@@ -180,7 +180,7 @@ update: function(){
 	if (key3.isDown)
     {
         //  Move down
-        player.body.velocity.y = 150;
+        player.body.velocity.y = 400;
 
         player.animations.play('walk')
 		
@@ -196,7 +196,7 @@ update: function(){
 	if (key1.isDown)
     {
         //  Move up
-        player.body.velocity.y = -150;
+        player.body.velocity.y = -400;
 
         player.animations.play('walk')
 		
