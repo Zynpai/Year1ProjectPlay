@@ -451,12 +451,6 @@ function collisionHandler6(){
 	game.state.start('gameOver');
 }
 
-function collisionHandler7(){
-	blaser.kill();
-	
-}
-
-
 function damageBoss(laser){
 	laser.kill();
 	if (alreadyDone3 == 0){
