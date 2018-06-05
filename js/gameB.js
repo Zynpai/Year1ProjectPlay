@@ -93,7 +93,7 @@ create: function(){
 	slasers = game.add.group();
 	slasers.enableBody = true;
 	slasers.physicsBodyType = Phaser.Physics.ARCADE;
-	slasers.createMultiple(1, 'slaser');
+	slasers.createMultiple(3, 'slaser');
 	slasers.callAll('events.onOutOfBounds.add', 'events.onOutOfBounds', resetSLaser);
 	slasers.callAll('anchor.setTo', 'anchor', 0.5, 1.0);
 	slasers.setAll('checkWorldBounds', true);
