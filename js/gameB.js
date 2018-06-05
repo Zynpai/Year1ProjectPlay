@@ -548,7 +548,4 @@ winReady = 1;
 }	
 }
 
-function collisionHandler7(){
-	blaser.kill();
 
-}
