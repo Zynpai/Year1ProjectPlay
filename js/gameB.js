@@ -546,4 +546,9 @@ totalTimer5++
 if (totalTimer5 == 5){
 winReady = 1;
 }	
-}	
+}
+
+function collisionHandler7(){
+	blaser.kill();
+
+}
